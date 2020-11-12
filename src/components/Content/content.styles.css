@@ -37,6 +37,7 @@
 .content-menu-divider {
     border-top: 0.5px solid rgba(0,0,0,0.05);
     border-style: inset;
+    border-bottom: 0px;
 }
 
 .content-menu__link-count {
