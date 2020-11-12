@@ -12,6 +12,7 @@ const GET_DATA =  gql`
     avatarUrl(size: 10)
     bio
     name
+    login
     repositories(last: 20) {
       nodes {
         name
@@ -35,16 +36,19 @@ const GET_DATA =  gql`
 const DataFetch = (props) => {
     const displayData = () => {
         let data = props.data;
-        console.log(data)
         if(data.loading) {
             return (
-                <div class="empty"><p>Loading Details...</p></div>
+                <div className="empty"><p>Loading Details...</p></div>
             )
         } else {
+          const { avatarUrl, bio, name, login } = data.user;
+          const repos = data.user.repositories.nodes;
+          console.log(repos);
+          console.log(avatarUrl, bio, name, login);
           return (
-            <div class="main-container">
+            <div className="main-container">
               <Header />
-              <div class="content-container">
+              <div className="content-container">
                 <Content />
               </div>
             </div>
