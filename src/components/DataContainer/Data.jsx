@@ -8,29 +8,30 @@ import Content from '../Content/content.component';
 
 const GET_DATA =  gql`
   query {
-  user(login: "MomohNobert") {
-    avatarUrl(size: 10)
-    bio
-    name
-    login
-    repositories(last: 20) {
-      nodes {
-        name
-        updatedAt
-        stargazerCount
-        url
-        forkCount
-        description
-        languages(first: 1) {
-          nodes {
-            name
-            color
+    user(login: "MomohNobert") {
+      avatarUrl(size: 10)
+      bio
+      name
+      login
+      repositories(last: 20) {
+        nodes {
+          name
+          updatedAt
+          stargazerCount
+          url
+          forkCount
+          description
+          languages(first: 1) {
+            nodes {
+              name
+              color
+            }
           }
+          id
         }
       }
     }
   }
-}
 `
 
 const DataFetch = (props) => {

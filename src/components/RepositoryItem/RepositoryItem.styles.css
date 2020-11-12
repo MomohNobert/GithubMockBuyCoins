@@ -1,0 +1,89 @@
+.repository-item-container {
+    height: 150px;
+    width: 100%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.repository-item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.repository-item-header__h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #3466d6;
+}
+
+.repository-item-header__button {
+    display: flex;
+    background-color: rgba(0,0,0,0.05);
+    border: 0.5px solid rgba(0,0,0,0.1);
+    padding: 5px 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.repository-item-header__svg {
+    margin-right: 5px;
+}
+
+.repository-item-content__desc {
+    font-size: 14px;
+    margin-top: 10px;
+    color: rgba(0,0,0,0.75);
+}
+
+.repository-item-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.repository-item-footer__language {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 20px; */
+}
+
+.repository-item-footer__language_color {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.repository-item-footer__language_p {
+    font-size: 15px;
+}
+
+.repository-item-stars,
+.repository-item-fork {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 20px;
+    opacity: 0.5;
+}
+
+.repository-item-stars__img,
+.repository-item-fork__img {
+    margin-right: 5px;
+    margin-top: 2px;
+}
+
+.repository-item-stars__count,
+.repository-item-fork__count {
+    font-size: 16px;
+}
+
+.repository-item-updated {
+    height: 20px;
+}

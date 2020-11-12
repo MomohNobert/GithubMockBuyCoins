@@ -1,3 +1,4 @@
+import RepositoryItem from '../RepositoryItem/RepositoryItem.component';
 import './repository.styles.css';
 
 const Repository = ({ githubData }) => {
@@ -13,7 +14,7 @@ const Repository = ({ githubData }) => {
             {
                 repos.map(repo => {
                     return (
-                        <div>{repo.name}</div>
+                        <RepositoryItem key={repo.id} repo={repo} />
                     )
                 })
             }
