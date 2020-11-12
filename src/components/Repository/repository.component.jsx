@@ -1,7 +1,7 @@
 import './repository.styles.css';
 
 const Repository = ({ githubData }) => {
-    console.log(githubData)
+    const repos = githubData.repositories.nodes;
     return (
         <div className="repository-container">
             <div className="repository-content-container">
@@ -9,6 +9,14 @@ const Repository = ({ githubData }) => {
             </div>
             <hr className="repository-container-divider" />
             <p className="repository-container-p">20 results for public repositories</p>
+            <br />
+            {
+                repos.map(repo => {
+                    return (
+                        <div>{repo.name}</div>
+                    )
+                })
+            }
         </div>
     )
 }
