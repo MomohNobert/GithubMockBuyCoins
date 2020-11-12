@@ -1,4 +1,5 @@
 import React from 'react';
+import MainContent from '../MainContent/mainContent.component';
 import './content.styles.css';
 
 const Content = () => {
@@ -26,6 +27,7 @@ const Content = () => {
                 </div>
             </div>
             <hr className="content-menu-divider" />
+            <MainContent />
         </div>
     )
 }
