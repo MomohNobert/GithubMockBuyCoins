@@ -3,11 +3,11 @@ import './mainContent.styles.css';
 import Author from '../Author/author.component';
 import Repository from '../Repository/repository.component';
 
-const MainContent = () => {
+const MainContent = ({ githubData }) => {
     return (
         <div className="main-content-container">
-            <Author />
-            <Repository />
+            <Author githubData={githubData} />
+            <Repository githubData={githubData} />
         </div>
     )
 }

@@ -41,15 +41,12 @@ const DataFetch = (props) => {
                 <div className="empty"><p>Loading Details...</p></div>
             )
         } else {
-          const { avatarUrl, bio, name, login } = data.user;
-          const repos = data.user.repositories.nodes;
-          console.log(repos);
-          console.log(avatarUrl, bio, name, login);
+          const githubData = data.user;
           return (
             <div className="main-container">
-              <Header />
+              <Header githubData={githubData} />
               <div className="content-container">
-                <Content />
+                <Content githubData={githubData} />
               </div>
             </div>
           )

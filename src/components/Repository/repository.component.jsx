@@ -1,6 +1,7 @@
 import './repository.styles.css';
 
-const Repository = () => {
+const Repository = ({ githubData }) => {
+    console.log(githubData)
     return (
         <div className="repository-container">
             <div className="repository-content-container">
