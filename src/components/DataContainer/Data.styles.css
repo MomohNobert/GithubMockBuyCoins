@@ -4,3 +4,7 @@
     display: grid;
     place-items: center;
 }
+
+.content-container {
+    margin-top: 9.5vh;
+}

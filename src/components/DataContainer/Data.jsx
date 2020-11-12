@@ -1,7 +1,10 @@
 import { graphql } from 'react-apollo';
 import { gql } from 'apollo-boost';
-import Header from '../Header/Header.component';
+
 import './Data.styles.css';
+
+import Header from '../Header/Header.component';
+import Content from '../Content/content.component';
 
 const GET_DATA =  gql`
   query {
@@ -20,6 +23,7 @@ const GET_DATA =  gql`
         languages(first: 1) {
           nodes {
             name
+            color
           }
         }
       }
@@ -38,7 +42,12 @@ const DataFetch = (props) => {
             )
         } else {
           return (
-            <Header />
+            <div class="main-container">
+              <Header />
+              <div class="content-container">
+                <Content />
+              </div>
+            </div>
           )
         }
     }
