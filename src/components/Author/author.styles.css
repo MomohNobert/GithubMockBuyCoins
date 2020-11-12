@@ -1,0 +1,29 @@
+.author-container {
+    width: 25%;
+    margin-top: -25px;
+}
+
+.author-content-container {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.author-image-container {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.author-identity-container {
+    width: 250px;
+    margin-top: 25px;
+}
+
+.author-bio-container {
+    width: 250px;
+    margin-top: 12.5px;
+}

@@ -1,8 +1,14 @@
-import './mainContent.styles';
+import './mainContent.styles.css';
+
+import Author from '../Author/author.component';
+import Repository from '../Repository/repository.component';
 
 const MainContent = () => {
     return (
-        <div>MainContent</div>
+        <div className="main-content-container">
+            <Author />
+            <Repository />
+        </div>
     )
 }
 
