@@ -55,6 +55,7 @@
 .links-container {
     display: flex;
     width: 30%;
+    min-width: 375px;
     margin: auto 20px;
     align-items: center;
     justify-content: space-between;

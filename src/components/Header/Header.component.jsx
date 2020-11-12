@@ -16,6 +16,7 @@ function Header() {
                     <div className="links-container">
                         <span>Pull requests</span>
                         <span>Issues</span>
+                        <span>Codespaces</span>
                         <span>Marketplace</span>
                         <span>Explore</span>
                     </div>

@@ -4,21 +4,27 @@ import Header from '../Header/Header.component';
 
 const GET_DATA =  gql`
   query {
-    user(login: "MomohNobert") {
-      avatarUrl(size: 10)
-      bio
-      name
-      repositories(last: 20) {
-        nodes {
-          name
-          updatedAt
-          stargazerCount
-          url
-          forkCount
+  user(login: "MomohNobert") {
+    avatarUrl(size: 10)
+    bio
+    name
+    repositories(last: 20) {
+      nodes {
+        name
+        updatedAt
+        stargazerCount
+        url
+        forkCount
+        description
+        languages(first: 1) {
+          nodes {
+            name
+          }
         }
       }
     }
   }
+}
 `
 
 const DataFetch = (props) => {
