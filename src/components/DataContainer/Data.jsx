@@ -1,6 +1,7 @@
 import { graphql } from 'react-apollo';
 import { gql } from 'apollo-boost';
 import Header from '../Header/Header.component';
+import './Data.styles.css';
 
 const GET_DATA =  gql`
   query {
@@ -33,7 +34,7 @@ const DataFetch = (props) => {
         console.log(data)
         if(data.loading) {
             return (
-                <div>Loading Books...</div>
+                <div class="empty"><p>Loading Details...</p></div>
             )
         } else {
           return (
