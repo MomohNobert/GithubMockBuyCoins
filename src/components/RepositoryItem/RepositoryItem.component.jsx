@@ -1,9 +1,11 @@
+import moment from 'moment';
 import './RepositoryItem.styles.css';
 
 const RepositoryItem = ({ repo }) => {
-    const month = repo.updatedAt.getUTCMonth() + 1;
-    const day = repo.dateObj.getUTCDate();
-    console.log(month, day)
+    // const dateDiff = moment().diff(moment(repo.updatedAt).format());
+    const dateDiff = moment(repo.updatedAt).diff(moment())
+    const dateString = moment.unix(dateDiff).format("MM/DD/YYYY");
+    console.log(dateString)
     return (
         <div className="repository-item-container">
             <div className="repository-item-header">
@@ -14,6 +16,7 @@ const RepositoryItem = ({ repo }) => {
                 </button>
             </div>
             <p className="repository-item-content__desc">{repo.description}</p>
+
             <div className="repository-item-footer">
                 {
                     repo.languages.nodes[0] ? (
