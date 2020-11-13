@@ -2,7 +2,6 @@ import moment from 'moment';
 import './RepositoryItem.styles.css';
 
 const RepositoryItem = ({ repo }) => {
-    // const dateDiff = moment().diff(moment(repo.updatedAt).format());
     const dateDiff = moment(repo.updatedAt).diff(moment())
     const dateString = moment.unix(dateDiff).format("MM/DD/YYYY");
     console.log(dateString)
