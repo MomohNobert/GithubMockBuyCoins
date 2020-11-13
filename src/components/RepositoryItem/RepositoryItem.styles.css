@@ -17,6 +17,7 @@
     font-size: 20px;
     font-weight: 600;
     color: #3466d6;
+    cursor: pointer;
 }
 
 .repository-item-header__button {
@@ -27,6 +28,13 @@
     align-items: center;
     justify-content: center;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+.repository-item-header__button:hover {
+    transition: all 0.2s linear;
+    background-color: rgba(0,0,0,0.1);
+    border: 0.5px solid rgba(0,0,0,0.15);
 }
 
 .repository-item-header__svg {

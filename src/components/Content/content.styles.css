@@ -22,6 +22,12 @@
     justify-content: center;
     opacity: 0.5;
     margin: auto 10px;
+    cursor: pointer;
+}
+
+.content-menu__link:hover {
+    transition: all 0.2s linear;
+    opacity: 0.75;
 }
 
 .content-menu__link-svg {
@@ -54,5 +60,9 @@
 
 .active {
     border-bottom: 2px solid orange;
+    opacity: 1;
+}
+
+.active:hover {
     opacity: 1;
 }
